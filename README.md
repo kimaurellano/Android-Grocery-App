@@ -12,8 +12,6 @@ Yes it is a passion project. No stress.
 
 Finish and make it public
 
-# Collaborator
-
 | Developer     |
 | ------------- |
 | Kim Aurellano |
