@@ -8,8 +8,6 @@ The app will identify what is price of the scanned product through a dataset of 
 
 Yes it is a passion project. No stress. 
 
-# Happy coding!
-
 # Our goal
 
 Finish and make it public
@@ -20,3 +18,6 @@ Finish and make it public
 | ------------- |
 | Kim Aurellano |
 | Nicole Lumagui|
+
+
+HAPPY CODING!
