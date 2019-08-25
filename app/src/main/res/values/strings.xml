@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Product_Scanner</string>
+    <string name="res_product_name_header">Product name</string>
+    <string name="res_price_header">Price</string>
+</resources>
