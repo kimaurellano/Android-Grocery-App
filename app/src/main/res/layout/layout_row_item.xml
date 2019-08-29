@@ -21,23 +21,43 @@
         card_view:layout_constraintStart_toStartOf="parent"
         card_view:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:layout_marginLeft="55dp"
-            android:paddingTop="15dp"
-            android:textAlignment="center"
-            android:text="Century Tuna 25g"
-            android:id="@+id/product_text"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp" />
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/price_text"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_marginLeft="255dp"
-            android:paddingTop="15dp"
-            android:text="PHP 150.00"
-            android:textAlignment="center" />
+            <TextView
+                android:id="@+id/product_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginStart="32dp"
+                android:paddingTop="15dp"
+                android:text="Century Tuna 25g"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                card_view:layout_constraintStart_toStartOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="60dp"
+                android:paddingTop="15dp"
+                android:text="PHP 150.00"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
+                card_view:layout_constraintEnd_toStartOf="@+id/buttonRemoveItem"
+                card_view:layout_constraintTop_toTopOf="parent" />
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/buttonRemoveItem"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                android:background="@drawable/ic_main_remove_item"
+                card_view:layout_constraintEnd_toEndOf="parent"
+                card_view:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 
 </android.support.constraint.ConstraintLayout>

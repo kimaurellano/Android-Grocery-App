@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <!-- Most seen color across the application -->
+    <color name="colorPrimary">#008cf7</color>
+    <color name="colorPrimaryDark">#0749b3</color>
+
+    <!-- Used in subtle key points -->
+    <color name="colorAccent">#f76b00</color>
+
+    <!-- Used in errors -->
+    <color name="colorError">#cc1414</color>
 </resources>
