@@ -1,9 +1,6 @@
 package com.cdtekk.product_scanner;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.widget.RecyclerView;
 import android.util.Pair;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +9,17 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.ArrayList;
 
-public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
     private ArrayList<Pair<String, String>> mProducts;
     private Context mContext;
+    public DataChangeResponse delegate = null;
 
     public RecyclerViewAdapter (Context context, ArrayList<Pair<String, String>> products){
         mContext = context;
@@ -46,6 +48,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 notifyItemRemoved(i);
                 notifyItemRangeChanged(i, mProducts.size());
+
+                float tAmount = 0;
+                for (Pair<String, String> product: mProducts) {
+                    tAmount += Float.parseFloat(product.second.substring(1));
+                }
+
+                delegate.onDataChange(tAmount);
             }
         });
 
