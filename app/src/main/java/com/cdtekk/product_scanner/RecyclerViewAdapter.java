@@ -57,13 +57,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 delegate.onDataChange(tAmount);
             }
         });
-
-        viewHolder.rowItemParent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext, mProducts.get(i).second, Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     @Override
