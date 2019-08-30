@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Grocery Application</string>
     <string name="res_product_list_header">Product List</string>
+    <string name="res_add_new_item_label">Add new item</string>
 </resources>
