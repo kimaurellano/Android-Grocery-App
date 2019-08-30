@@ -27,16 +27,9 @@ public class MainActivity extends AppCompatActivity implements DataChangeRespons
         findViewById(R.id.buttonAddItem).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AddProduct(new Pair<>("Ligo Sardines", "₱16.00"));
-
-                // Get the price
-                String lastInput = products.get(products.size() - 1).second;
-
-                // Sum the prices
-                tAmount += Float.parseFloat(lastInput.substring(1));
-
-                textViewTotalAmount = findViewById(R.id.textViewTotalAmount);
-                textViewTotalAmount.setText("₱ " + tAmount);
+                // TODO: show add item dialog box
+                CustomAddItemDialog customAddItemDialog = new CustomAddItemDialog(MainActivity.this);
+                customAddItemDialog.show();
             }
         });
     }
@@ -59,6 +52,6 @@ public class MainActivity extends AppCompatActivity implements DataChangeRespons
     public void onDataChange(float amountUpdate){
         Toast.makeText(this, Float.toString(amountUpdate), Toast.LENGTH_SHORT).show();
         textViewTotalAmount = findViewById(R.id.textViewTotalAmount);
-        textViewTotalAmount.setText("₱ " + amountUpdate);
+        textViewTotalAmount.setText(String.format("₱%.2f", amountUpdate));
     }
 }
