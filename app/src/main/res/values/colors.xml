@@ -9,4 +9,6 @@
 
     <!-- Used in errors -->
     <color name="colorError">#cc1414</color>
+
+    <color name="colorRipple">#b3b4b5</color>
 </resources>
