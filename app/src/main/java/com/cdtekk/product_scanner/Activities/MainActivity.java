@@ -1,8 +1,11 @@
 package com.cdtekk.product_scanner.Activities;
 
+import android.animation.AnimatorSet;
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -14,6 +17,9 @@ import com.cdtekk.product_scanner.Interface.OnFragmentInteractionListener;
 import com.cdtekk.product_scanner.Model.Product;
 import com.cdtekk.product_scanner.R;
 
+import org.w3c.dom.Text;
+
+@SuppressLint("SetTextI18n")
 public class MainActivity extends AppCompatActivity implements DataChangeResponse, OnFragmentInteractionListener {
 
     private String TAG = "GROCERYAPP";
@@ -28,6 +34,9 @@ public class MainActivity extends AppCompatActivity implements DataChangeRespons
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        final TextView textViewWindowType = findViewById(R.id.textViewWindowType);
+        final TextView textViewWindowContentSummary = findViewById(R.id.textViewWindowContentSummary);
+
         // Opened by default
         openFragment(Product.CART_LIST_TYPE);
 
@@ -35,6 +44,9 @@ public class MainActivity extends AppCompatActivity implements DataChangeRespons
             @Override
             public void onBackStackChanged() {
                 Log.d(TAG, "entries:" + getSupportFragmentManager().getBackStackEntryCount());
+
+                textViewWindowType.setText(windowIdx == 1 ? "Product list" : "Your cart");
+                textViewWindowContentSummary.setText(windowIdx == 1 ? "0 items" : "₱ 0.00");
             }
         });
 
@@ -82,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements DataChangeRespons
 
     @Override
     public void onFragmentInteraction(String data) {
-
     }
 
     @Override

@@ -31,10 +31,26 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/linearLayoutCategory"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical"
                 android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textViewAll"
+                    android:layout_width="80dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/bg_button_category"
+                    android:clickable="true"
+                    android:padding="7dp"
+                    android:text="All"
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText"
+                    android:focusable="true" />
 
                 <TextView
                     android:id="@+id/textViewCanned"
@@ -47,7 +63,9 @@
                     android:clickable="true"
                     android:padding="7dp"
                     android:text="Canned"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText"
+                    android:focusable="true" />
 
                 <TextView
                     android:id="@+id/textViewDairy"
@@ -60,7 +78,9 @@
                     android:clickable="true"
                     android:padding="7dp"
                     android:text="Dairy"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText"
+                    android:focusable="true" />
 
                 <TextView
                     android:id="@+id/textViewKitchen"
@@ -73,7 +93,9 @@
                     android:clickable="true"
                     android:padding="7dp"
                     android:text="Kitchen"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText"
+                    android:focusable="true" />
 
                 <TextView
                     android:id="@+id/textViewSnacks"
@@ -86,7 +108,9 @@
                     android:clickable="true"
                     android:padding="7dp"
                     android:text="Snacks"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText"
+                    android:focusable="true" />
 
                 <TextView
                     android:id="@+id/textViewDrinks"
@@ -99,10 +123,50 @@
                     android:clickable="true"
                     android:padding="7dp"
                     android:text="Drinks"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText"
+                    android:focusable="true" />
 
             </LinearLayout>
         </HorizontalScrollView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="241dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/listViewProductList" >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <EditText
+                    android:id="@+id/editTextSearchProductList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/montserrat"
+                    android:hint="Search"
+                    android:textColor="#848484"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
 
         <ImageButton
             android:id="@+id/floatingActionButtonToCartView"
@@ -115,31 +179,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 
-        <TextView
-            android:id="@+id/textViewSelectedCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/montserrat"
-            android:text="CATEGORY"
-            android:textColor="#FFF"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
-            tools:ignore="HardcodedText" />
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listViewProductList"
             android:layout_width="match_parent"
-            android:layout_height="483dp"
-            android:layout_marginTop="5dp"
+            android:layout_height="525dp"
             android:background="#FFF"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewSelectedCategory"
-            app:layout_constraintVertical_bias="1.0"
-            tools:layout_editor_absoluteX="0dp" />
+            tools:layout_editor_absoluteX="105dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
