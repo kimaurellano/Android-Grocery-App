@@ -3,189 +3,169 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragment_product_list"
+    android:background="@drawable/bg_recyclerview_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
         android:layout_width="match_parent"
-        android:layout_height="594dp"
-        android:background="@drawable/bg_recyclerview_container"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:fadeScrollbars="true"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="top"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textViewAll"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_button_category"
+                android:clickable="true"
+                android:padding="7dp"
+                android:text="All"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/textViewCanned"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_button_category"
+                android:clickable="true"
+                android:padding="7dp"
+                android:text="Canned"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/textViewDairy"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_button_category"
+                android:clickable="true"
+                android:padding="7dp"
+                android:text="Dairy"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/textViewKitchen"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_button_category"
+                android:clickable="true"
+                android:padding="7dp"
+                android:text="Kitchen"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/textViewSnacks"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_button_category"
+                android:clickable="true"
+                android:padding="7dp"
+                android:text="Snacks"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/textViewDrinks"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/bg_button_category"
+                android:clickable="true"
+                android:padding="7dp"
+                android:text="Drinks"
+                android:textAlignment="center"
+                tools:ignore="HardcodedText"
+                android:focusable="true" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="241dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/listViewProductList" >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <EditText
+                android:id="@+id/editTextSearchProductList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:textColor="#848484"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listViewProductList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:background="#FFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1"
-        tools:layout_editor_absoluteX="0dp">
-
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="20dp"
-            android:fadeScrollbars="true"
-            android:fillViewport="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <LinearLayout
-                android:id="@+id/linearLayoutCategory"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_vertical"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/textViewAll"
-                    android:layout_width="80dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/bg_button_category"
-                    android:clickable="true"
-                    android:padding="7dp"
-                    android:text="All"
-                    android:textAlignment="center"
-                    tools:ignore="HardcodedText"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/textViewCanned"
-                    android:layout_width="80dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/bg_button_category"
-                    android:clickable="true"
-                    android:padding="7dp"
-                    android:text="Canned"
-                    android:textAlignment="center"
-                    tools:ignore="HardcodedText"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/textViewDairy"
-                    android:layout_width="80dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/bg_button_category"
-                    android:clickable="true"
-                    android:padding="7dp"
-                    android:text="Dairy"
-                    android:textAlignment="center"
-                    tools:ignore="HardcodedText"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/textViewKitchen"
-                    android:layout_width="80dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/bg_button_category"
-                    android:clickable="true"
-                    android:padding="7dp"
-                    android:text="Kitchen"
-                    android:textAlignment="center"
-                    tools:ignore="HardcodedText"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/textViewSnacks"
-                    android:layout_width="80dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/bg_button_category"
-                    android:clickable="true"
-                    android:padding="7dp"
-                    android:text="Snacks"
-                    android:textAlignment="center"
-                    tools:ignore="HardcodedText"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/textViewDrinks"
-                    android:layout_width="80dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/bg_button_category"
-                    android:clickable="true"
-                    android:padding="7dp"
-                    android:text="Drinks"
-                    android:textAlignment="center"
-                    tools:ignore="HardcodedText"
-                    android:focusable="true" />
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="241dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/listViewProductList" >
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_search"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <EditText
-                    android:id="@+id/editTextSearchProductList"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@android:color/transparent"
-                    android:fontFamily="@font/montserrat"
-                    android:hint="Search"
-                    android:textColor="#848484"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="HardcodedText" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </androidx.cardview.widget.CardView>
-
-        <ImageButton
-            android:id="@+id/floatingActionButtonToCartView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="32dp"
-            android:background="@drawable/ic_main_cart"
-            android:elevation="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listViewProductList"
-            android:layout_width="match_parent"
-            android:layout_height="525dp"
-            android:background="#FFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            tools:layout_editor_absoluteX="105dp" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
