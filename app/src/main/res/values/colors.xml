@@ -6,6 +6,7 @@
 
     <!-- Used in subtle key points -->
     <color name="colorAccent">#f76b00</color>
+    <color name="colorSecondary">#fbc02d</color>
 
     <!-- Used in errors -->
     <color name="colorError">#cc1414</color>
