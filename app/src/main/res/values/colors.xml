@@ -1,15 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!--?xml version="1.0" encoding="UTF-8"?-->
 <resources>
-    <!-- Most seen color across the application -->
-    <color name="colorPrimary">#008cf7</color>
-    <color name="colorPrimaryDark">#0749b3</color>
-
-    <!-- Used in subtle key points -->
-    <color name="colorAccent">#f76b00</color>
-    <color name="colorSecondary">#fbc02d</color>
-
-    <!-- Used in errors -->
-    <color name="colorError">#cc1414</color>
-
-    <color name="colorRipple">#b3b4b5</color>
+  <color name="primaryColor">#f9c22d</color>
+  <color name="primaryLightColor">#fff463</color>
+  <color name="primaryDarkColor">#c29200</color>
+  <color name="secondaryColor">#ffffff</color>
+  <color name="secondaryLightColor">#ffffff</color>
+  <color name="secondaryDarkColor">#cccccc</color>
+  <color name="primaryTextColor">#000000</color>
+  <color name="secondaryTextColor">#000000</color>
 </resources>
