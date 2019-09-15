@@ -6,7 +6,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.cdtekk.product_scanner.Interface.DataChangeResponse;
 import com.cdtekk.product_scanner.Model.Product;
 
 import java.util.ArrayList;
@@ -15,8 +14,6 @@ public class RecyclerMultiViewAdapter extends RecyclerView.Adapter {
 
     private ArrayList<Product> mProducts;
     private Context mContext;
-
-    public DataChangeResponse delegate = null;
 
     /**
      * @param context the context
