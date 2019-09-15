@@ -7,6 +7,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabProductList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_product_list"
+        app:backgroundTint="@color/secondaryDarkColor"/>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
@@ -54,9 +66,10 @@
 
         <ImageButton
             android:id="@+id/imageButtonBack"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/ic_main_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

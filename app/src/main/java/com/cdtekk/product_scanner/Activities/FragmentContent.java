@@ -1,7 +1,8 @@
 package com.cdtekk.product_scanner.Activities;
 
 import android.os.Bundle;
-import android.util.Log;
+import android.transition.Slide;
+import android.transition.TransitionManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,28 +10,22 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.transition.TransitionManager;
 
-import com.cdtekk.product_scanner.Interface.OnFragmentContentCloseListener;
 import com.cdtekk.product_scanner.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.transitionseverywhere.extra.Scale;
-
-import static com.cdtekk.product_scanner.Activities.MainActivity.TAG;
 
 public class FragmentContent extends Fragment {
 
     private int mFragment;
-    private OnFragmentContentCloseListener mCloseListener;
+    private static OnFabInteractionListener onFabInteractListener;
+
+    public static void setOnHappeningsListener(OnFabInteractionListener listener){
+        onFabInteractListener = listener;
+    }
 
     public FragmentContent(){ }
 
-    public FragmentContent(int fragment){
-        this.mFragment = fragment;
-    }
-
-    public void setOnFragmentContentCloseListener(OnFragmentContentCloseListener listener){
-        mCloseListener = listener;
+    public FragmentContent(int fragmentLayout){
+        this.mFragment = fragmentLayout;
     }
 
     @Override
@@ -44,34 +39,37 @@ public class FragmentContent extends Fragment {
         // Load with either your cart/products fragment
         View view = inflater.inflate(mFragment, container, false);
 
-        Log.d(TAG, container.toString());
-
         if(mFragment == R.layout.fragment_my_cart){
-            // TODO
+            view.findViewById(R.id.fabProductList).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onFabInteractListener.onFabInteract(R.layout.fragment_products);
+                }
+            });
         } else if (mFragment == R.layout.fragment_products){
-            // TODO
+            view.findViewById(R.id.fabCart).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onFabInteractListener.onFabInteract(R.layout.fragment_my_cart);
+                }
+            });
         }
-
-        final FragmentLanding fragmentLanding = new FragmentLanding();
-        fragmentLanding.setFragmentContentCloseListener(new OnFragmentContentCloseListener() {
-            @Override
-            public void onFragmentClose() {
-                TransitionManager.beginDelayedTransition(container, new Scale());
-                FloatingActionButton floatingActionButton = container.findViewById(R.id.fabChangeContent);
-                floatingActionButton.setVisibility(View.GONE);
-            }
-        });
 
         view.findViewById(R.id.imageButtonBack).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.fragment_root_view, fragmentLanding)
+                        .setCustomAnimations(R.anim.slide_from_right, R.anim.slide_to_left)
+                        .replace(R.id.fragment_root_view, new FragmentLanding())
                         .commit();
             }
         });
 
         return view;
+    }
+
+    public interface OnFabInteractionListener {
+        void onFabInteract(int fragmentLayout);
     }
 }

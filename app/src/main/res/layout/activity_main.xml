@@ -3,23 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Activities.MainActivity">
 
     <FrameLayout
         android:id="@+id/fragment_root_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabChangeContent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="36dp"
-            android:layout_marginBottom="36dp"
-            android:src="@drawable/content_fab_convert"
-            app:backgroundTint="@color/secondaryDarkColor"
-            android:visibility="gone"/>
-    </FrameLayout>
+        android:layout_height="match_parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
