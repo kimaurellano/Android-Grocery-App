@@ -19,3 +19,7 @@ Finish and make it public
 
 
 HAPPY CODING!
+
+# Preview
+
+![Alt Text](https://github.com/kimaurellano/Grocery-Item-Listing-Application/blob/master/Preview.PNG)
