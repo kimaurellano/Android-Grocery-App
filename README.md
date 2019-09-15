@@ -22,4 +22,6 @@ HAPPY CODING!
 
 # Preview
 
+This might change over the course of development process
+
 ![Alt Text](https://github.com/kimaurellano/Grocery-Item-Listing-Application/blob/master/Preview.PNG)
