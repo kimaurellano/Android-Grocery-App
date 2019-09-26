@@ -1,0 +1,38 @@
+https://shop.smmarkets.ph/index.php/dairy-milk-eggs.html 	 Number of pages: 	 17
+https://shop.smmarkets.ph/index.php/oils-rice-beans-grains.html 	 Number of pages: 	 6
+https://shop.smmarkets.ph/index.php/soups-noodles-pasta.html 	 Number of pages: 	 15
+https://shop.smmarkets.ph/index.php/canned-packaged-food.html 	 Number of pages: 	 16
+https://shop.smmarkets.ph/index.php/canned-packaged-food.html 	 https://shop.smmarkets.ph/index.php/canned-packaged-food.html?p=12 	 Message: 
+
+https://shop.smmarkets.ph/index.php/condiments-dressings.html 	 Number of pages: 	 23
+https://shop.smmarkets.ph/index.php/snacks.html 	 Number of pages: 	 70
+https://shop.smmarkets.ph/index.php/snacks.html 	 https://shop.smmarkets.ph/index.php/snacks.html?p=9 	 Message: 
+
+https://shop.smmarkets.ph/index.php/chocolates-candies.html 	 Number of pages: 	 22
+https://shop.smmarkets.ph/index.php/chocolates-candies.html 	 https://shop.smmarkets.ph/index.php/chocolates-candies.html?p=5 	 Message: 
+
+https://shop.smmarkets.ph/index.php/breakfast-food-spreads.html 	 Number of pages: 	 24
+https://shop.smmarkets.ph/index.php/breakfast-food-spreads.html 	 https://shop.smmarkets.ph/index.php/breakfast-food-spreads.html?p=9 	 Message: 
+
+https://shop.smmarkets.ph/index.php/beverages.html 	 Number of pages: 	 24
+https://shop.smmarkets.ph/index.php/baking-products.html 	 Number of pages: 	 6
+https://shop.smmarkets.ph/index.php/baby-foods.html 	 Error occured for pages: 	 Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="amscroll-navbar"]/span"}
+  (Session info: headless chrome=76.0.3809.132)
+
+https://shop.smmarkets.ph/index.php/baby-foods.html 	 Number of pages: 	 1
+https://shop.smmarkets.ph/index.php/health-beauty.html 	 Number of pages: 	 92
+https://shop.smmarkets.ph/index.php/health-beauty.html 	 https://shop.smmarkets.ph/index.php/health-beauty.html?p=65 	 Message: unknown error: DevToolsActivePort file doesn't exist
+
+https://shop.smmarkets.ph/index.php/household.html 	 Number of pages: 	 48
+https://shop.smmarkets.ph/index.php/home-kitchen.html 	 Number of pages: 	 4
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+https://shop.smmarkets.ph/index.php/snacks.html 	 https://shop.smmarkets.ph/index.php/snacks.html?p=22 	 Message: 
+
+https://shop.smmarkets.ph/index.php/health-beauty.html 	 https://shop.smmarkets.ph/index.php/health-beauty.html?p=83 	 Message: session not created
+from timeout: Timed out receiving message from renderer: 600.000
+  (Session info: headless chrome=76.0.3809.132)
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------https://shop.smmarkets.ph/index.php/snacks.html 	 https://shop.smmarkets.ph/index.php/snacks.html?p=34 	 Message: 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
