@@ -1,0 +1,20 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/primaryLightColor">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/primaryColor" />
+            <corners android:radius="5dp" />
+            <stroke android:width="5px"
+                android:color="#FFF"/>
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/ic_cart"
+        android:height="100dp"
+        android:width="100dp"
+        android:top="36dp"
+        android:bottom="36dp"
+        android:right="36dp"
+        android:left="36dp"/>
+</ripple>

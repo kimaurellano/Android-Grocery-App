@@ -1,0 +1,16 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<resources>
+  <color name="primaryColor">#f9c42d</color>
+  <color name="primaryLightColor">#fff763</color>
+  <color name="primaryDarkColor">#c29400</color>
+  <color name="secondaryColor">#ffffff</color>
+  <color name="secondaryLightColor">#ffffff</color>
+  <color name="secondaryDarkColor">#cccccc</color>
+  <color name="primaryTextColor">#000000</color>
+  <color name="secondaryTextColor">#000000</color>
+
+  <color name="customTextColorPrimary">#F9A825</color>
+  <color name="customTextColorSecondary">#4F4F4F</color>
+
+  <color name="outlineSpotShadow">#14030303</color>
+</resources>

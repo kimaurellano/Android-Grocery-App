@@ -1,0 +1,23 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <ripple android:color="#FFF"
+            android:radius="70dp">
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@color/primaryColor" />
+                    <corners android:radius="5dp" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+
+    <item android:drawable="@drawable/ic_profile"
+        android:top="5dp"
+        android:bottom="25dp"
+        android:right="5dp"
+        android:left="5dp"
+        android:gravity="center"
+        android:height="70dp"
+        android:width="70dp"
+        />
+</layer-list>

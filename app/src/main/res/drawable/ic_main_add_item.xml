@@ -1,0 +1,18 @@
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#FFF">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFFFF" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
+
+    <item android:drawable="@drawable/ic_add_item"
+        android:height="100dp"
+        android:width="100dp"
+        android:top="16dp"
+        android:bottom="16dp"
+        android:right="16dp"
+        android:left="16dp"/>
+</ripple>
