@@ -21,7 +21,5 @@ Finish and make it public
 HAPPY CODING!
 
 # Preview
-
-This might change over the course of development process
 ![Alt Text](https://github.com/kimaurellano/Grocery-Item-Listing-Application/blob/kotlin-dev/Preview/Cart.PNG)
 ![Alt Text](https://github.com/kimaurellano/Grocery-Item-Listing-Application/blob/kotlin-dev/Preview/ProductList.PNG)
